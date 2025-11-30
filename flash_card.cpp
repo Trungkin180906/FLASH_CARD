@@ -124,13 +124,11 @@ void update_flashcard(double_linked_list &list, const string &update){
         if (temp->question==update){
             cout<<"Tìm thấy flash card. Nhập new flash card (nhấn Enter để giữ nguyên): ";
             string new_question;
-            cin.ignore();
             getline(cin, new_question);
             if (!new_question.empty()) temp->question=new_question;//nếu nhập khác rỗng thì cập nhật lại question
 
             cout<<"Nhập đáp án mới: ";
             string new_answer;
-            cin.ignore();
             getline(cin, new_answer);
             if (!new_answer.empty()) temp->answer=new_answer;//nếu nhập khác rỗng cập nhật lại đáp án
             return;
